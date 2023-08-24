@@ -3,9 +3,9 @@ import employeesRoutes from "./routes/employees.routes.js";
 import indexRoutes from "./routes/index.routes.js";
 
 const app = express();
-
-app.use(indexRoutes)
-
+app.use(express.json());
+// Main route
+app.use('/ping', indexRoutes)
 // getting employees routes
 app.use('/employees', employeesRoutes)
 
